@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-#4-print_hexa.py
+# 4-print_hexa.py
 
-"""Print number 0 to 98 in decimal and hexadecimal."""
+"Print number 0 to 98 in decimal and hexadecimal."
 for number in range(0, 99):
-    print(f"{number} = {hex(number)}")
+    print("{} = {}".format(number, hex(number)))
