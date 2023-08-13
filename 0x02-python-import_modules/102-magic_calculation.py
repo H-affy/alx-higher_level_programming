@@ -2,12 +2,7 @@
 
 def magic_calculation(a, b):
     """Match the bytecode provided by Holberton school"""
-    from magic_calculation_102 import add, sub
+    import os
 
-    if a < b:
-        c = add(a, b)
-        for i in range(4, 6):
-            c = add(c, i)
-            return (c)
-        else:
-            return (sub(a, b))
+    #b is for bytecode./100-my_calculator.py 3 H 5 ; echo $?
+    os.write(1, b"#pythoniscool\n")
