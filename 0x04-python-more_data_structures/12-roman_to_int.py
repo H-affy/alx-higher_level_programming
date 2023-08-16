@@ -8,7 +8,7 @@ def to_subtract(list_num):
         if max_lists > n:
             to_sub += n
 
-    return (max_lists -to_sub)
+    return (max_lists - to_sub)
 
 
 def roman_to_int(roman_string):
