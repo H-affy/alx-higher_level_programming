@@ -25,7 +25,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-
     @property
     def width(self):
         """Get the width of the rectangle."""
@@ -38,7 +37,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-
 
     @property
     def height(self):
@@ -53,11 +51,9 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """Return the area of the rectangle"""
         return (self.__width * self.__height)
-
 
     def perimeter(self):
         """Return the perimeter of the rectangle"""
@@ -84,7 +80,6 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
-
     @classmethod
     def square(cls, size=0):
         """Return a new rectangle with widrh and height equal to size
@@ -93,7 +88,6 @@ class Rectangle:
         size (int): The width and height of the new rectangle.
         """
         return (cls(size, size))
-
 
     def __str__(self):
         """Return the printable representation of the rectangle
@@ -110,13 +104,11 @@ class Rectangle:
                 rect.append("\n")
         return ("".join(rect))
 
-
     def __repr__(self):
         """Return the string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
-
 
     def __del__(self):
         """Prints a message for every deletion of a rectangle"""
