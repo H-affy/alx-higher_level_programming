@@ -1,1 +1,1 @@
-Higher level programming
+Python exceptions are error detected during execution
