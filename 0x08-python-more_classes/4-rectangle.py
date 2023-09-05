@@ -43,7 +43,7 @@ class Rectangle:
 
     def area(self):
         """returns the area of the rectangle"""
-        return (self.__ width * self.__height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """return The perimeter of the rectangle"""
@@ -67,5 +67,5 @@ class Rectangle:
     def __repr__(self):
         """return the string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
-        rect += ", "str(self.__height) + ")"
+        rect += ", " + str(self.__height) + ")"
         return (rect)
