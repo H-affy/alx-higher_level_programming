@@ -1,23 +1,24 @@
-#!/usr/bin/pyrhon3
-"""defines the rectangle class"""
+#!/usr/bin/python3
+"""defines a rectangle class"""
 
 
 class Rectangle:
     """represents a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """initializes a new rectangle.
+        """Initializes a new rectangle.
 
         Args:
-        width (int): The width of the new rectangle
-        height (int): the height of the new rectangle
+        width (int): The width of the new rectangle.
+        height (int): the height oof the new rectangle.
         """
+
         self.height = height
         self.width = width
 
     @property
     def height(self):
-        """Set/get the height of the rectangle"""
+        """setd the height of the rectangle"""
         return self.__height
 
     @height.setter
@@ -30,7 +31,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Set/get the width of the rectangle"""
+        """sets the width of the rectangle"""
         return self.__width
 
     @width.setter
