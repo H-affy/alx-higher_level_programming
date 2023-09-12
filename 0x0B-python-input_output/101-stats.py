@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-"""Reads from standard inputs and computes metrics
-after every ten lines or the input of a keyboard interruption (CTRL + C),
+
+"""This reads from standard input and computes metrics.
+After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
-    -Total file size up to that points.
-    -Count of read stattus codes up to that point
-    """
+    - The total file size up to that point.
+    - Count of read status codes up to that point.
+"""
 
 
 def print_stats(size, status_codes):
-    """prints accumulated metrics
-
+    """This prints accumulated metrics.
     Args:
-    size (int): the accumulated read file size
-    status_codes (dict): The accumulated count of status codes
+        size (int): This is the accumulated read file size.
+        status_codes (dict): This is the accumulated count of status codes.
     """
-    print("file size: {}".format(size))
+    print("File size: {}".format(size))
     for key in sorted(status_codes):
-        print("{}".format(key, status_codes[key]))
-
+        print("{}: {}".format(key, status_codes[key]))
 
 if __name__ == "__main__":
     import sys
 
     size = 0
     status_codes = {}
-    valid_codes = ['200', '301', '400', '403', '404', '405', '500']
+    valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
     count = 0
 
     try:
@@ -45,11 +44,12 @@ if __name__ == "__main__":
             try:
                 if line[-2] in valid_codes:
                     if status_codes.get(line[-2], -1) == -1:
-                       status_codes[line[-2]] = 1
+                        status_codes[line[-2]] = 1
                     else:
-                       status_codes[line[-2]] += 1
+                        status_codes[line[-2]] += 1
             except IndexError:
                 pass
+
         print_stats(size, status_codes)
 
     except KeyboardInterrupt:
