@@ -1,1 +1,1 @@
-Python exceptions are error detected during execution
+Introduction to SQL
